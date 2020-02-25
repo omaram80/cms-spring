@@ -44,6 +44,11 @@
 			<artifactId>sonar-maven-plugin</artifactId>
 			<version>3.7.0.1746</version>
 		</dependency>
+		<dependency>
+    		<groupId>org.jacoco</groupId>
+    		<artifactId>jacoco-maven-plugin</artifactId>
+		    <version>0.8.5</version>
+		</dependency>
 	</dependencies>
 	<profiles>
         <profile>
@@ -54,8 +59,12 @@
             <properties>
                 <!-- Optional URL to server. Default value is http://localhost:9000 -->
                 <sonar.host.url>
-                  http://localhost:9000
+                  https://seliius23076.seli.gic.ericsson.se/
                 </sonar.host.url>
+                <!-- Community -->
+                <!-- sonar.login>e2d013d979b2c8b5939016375b81449c57e5c259</sonar.login-->
+                <!-- Enterprise -->
+                <sonar.login>1497851e6e6308f69c254b5c0a9a901ed65011bb</sonar.login>                          
             </properties>
         </profile>
      </profiles>
@@ -68,5 +77,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
